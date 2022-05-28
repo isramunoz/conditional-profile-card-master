@@ -29,18 +29,90 @@ function render(variables = {}) {
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
+  let country = "USA";
+  if (variables.country === null) {
+    country = "USA";
+  } else {
+    country = variables.country;
+  }
+
+  let city = "Miami";
+  if (variables.city === null) {
+    city = "Miami";
+  } else {
+    city = variables.city;
+  }
+
+  let role = "Web Developer";
+  if (variables.role === null) {
+    role = "Web Developer";
+  } else {
+    role = variables.role;
+  }
+
+  let name = "Lucy";
+  if (variables.name === null) {
+    name = "Lucy";
+  } else {
+    name = variables.name;
+  }
+
+  let lastname = "Boilett";
+  if (variables.lastname === null) {
+    lastname = "Boilett";
+  } else {
+    lastname = variables.lastname;
+  }
+
+  let instagram = "4geeksacademy";
+  if (variables.instagram === null) {
+    instagram = "4geeksacademy";
+  } else {
+    instagram = variables.instagram;
+  }
+
+  let linkedin = "4geeksacademy";
+  if (variables.linkedin === null) {
+    linkedin = "4geeksacademy";
+  } else {
+    linkedin = variables.linkedin;
+  }
+
+  let github = "4geeksacademy";
+  if (variables.github === null) {
+    github = "4geeksacademy";
+  } else {
+    github = variables.github;
+  }
+
+  let twitter = "4geeksacademy";
+  if (variables.twitter === null) {
+    twitter = "4geeksacademy";
+  } else {
+    twitter = variables.twitter;
+  }
+
+  let socialMediaPosition = "right";
+  if (variables.socialMediaPosition === null) {
+    socialMediaPosition = "right";
+  } else {
+    socialMediaPosition = variables.socialMediaPosition;
+  }
+
+  // https://instagram.com/4geeksacademy
+
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
-          <ul class="position-right">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+          <h1>${name} ${lastname}</h1>
+          <h2>${role}</h2>
+          <h3>${city}, ${country}</h3>
+          <ul class="${socialMediaPosition}">
+            <li><a href="https://twitter.com/${twitter}"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://github.com/${github}"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/${linkedin}"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/${instagram}"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
